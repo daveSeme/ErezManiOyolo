@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101a18" />
+  <meta name="description" content="Portfolio of Erez Mani Oyolo — Economics graduate and Financial Analyst Intern at Cytonn Investments." />
+  <title>Erez Mani Oyolo | Economics & Financial Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:#17221f; --muted:#68746f; --paper:#f6f7f3; --white:#fff;
+      --green:#173b32; --green2:#245648; --lime:#c7d9a7; --gold:#c5a46b;
+      --line:#e4e9e2; --dark:#101a18; --darkmuted:#b6c3bc;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,calc(100% - 48px));margin:auto}
+    .nav-wrap{position:absolute;top:0;left:0;right:0;z-index:5}
+    nav{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.12)}
+    .brand{display:flex;align-items:center;gap:12px;color:white;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:.02em}
+    .monogram{width:39px;height:39px;border:1px solid rgba(199,217,167,.7);display:grid;place-items:center;color:var(--lime);font-family:var(--serif);font-size:17px}
+    .nav-links{display:flex;gap:30px;color:#d3ddd7;font-size:13px}
+    .nav-links a{transition:color .2s}.nav-links a:hover{color:var(--lime)}
+    .nav-cta{border:1px solid rgba(199,217,167,.65);padding:10px 16px;color:var(--lime);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+    .hero{min-height:690px;background:
+      radial-gradient(ellipse at 78% 28%,rgba(71,111,89,.35),transparent 38%),
+      radial-gradient(ellipse at 15% 90%,rgba(38,83,68,.3),transparent 42%),
+      linear-gradient(125deg,#101a18 0%,#14231f 58%,#1c3029 100%);
+      color:white;position:relative;overflow:hidden;padding:165px 0 90px}
+    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(to bottom,black,transparent 88%);pointer-events:none}
+    .hero-inner{position:relative;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:60px}
+    .eyebrow{color:var(--lime);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+    .eyebrow:before{content:"";width:32px;height:1px;background:var(--gold)}
+    h1{font-family:Manrope,sans-serif;font-size:clamp(48px,7vw,82px);line-height:1.03;letter-spacing:-.065em;margin:25px 0 22px;font-weight:600}
+    h1 span{font-family:var(--serif);font-style:italic;color:var(--lime);font-weight:400;letter-spacing:-.04em}
+    .hero-copy{max-width:590px;color:#c5d0ca;font-size:17px;line-height:1.85}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,background .2s}
+    .btn:hover{transform:translateY(-3px)}
+    .btn-primary{background:var(--lime);color:#17251f}
+    .btn-outline{border:1px solid rgba(255,255,255,.35);color:white}
+    .hero-card{justify-self:end;width:min(100%,320px);padding:27px;border:1px solid rgba(199,217,167,.25);background:rgba(255,255,255,.045);backdrop-filter:blur(10px);position:relative}
+    .hero-card:after{content:"";position:absolute;right:-12px;top:14px;bottom:-12px;width:100%;border:1px solid rgba(199,217,167,.16);z-index:-1}
+    .card-label{color:var(--lime);font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+    .card-number{font-family:var(--serif);font-size:52px;color:white;line-height:1.15;margin:20px 0 4px}
+    .card-caption{color:#b8c7bf;font-size:13px}
+    .card-rule{height:1px;background:rgba(255,255,255,.15);margin:24px 0}
+    .focus-list{display:grid;gap:13px;color:#e0e8e2;font-size:13px}
+    .focus-list span:before{content:"↗";color:var(--lime);margin-right:10px}
+    .hero-bottom{position:absolute;bottom:27px;left:0;right:0;color:#8e9e95;font-size:10px;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:space-between}
+    section{padding:100px 0}
+    .section-kicker{color:#8b754f;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+    h2{font-family:Manrope,sans-serif;font-size:clamp(32px,4vw,47px);line-height:1.15;letter-spacing:-.05em;margin:0 0 22px;font-weight:600}
+    .intro{font-size:17px;color:#5d6a64;max-width:690px;line-height:1.85}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:95px;align-items:start}
+    .about-aside{padding:30px;background:#eaf0e8;border-left:3px solid var(--green2)}
+    .about-aside strong{display:block;font-family:Manrope,sans-serif;font-size:18px;margin-bottom:8px}
+    .about-aside p{font-size:13px;color:#64716a;margin:0}
+    .about-copy p{color:#64716a;margin:0 0 16px}
+    .meta-row{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px}
+    .meta{font-size:12px;color:#64716a}.meta b{display:block;color:var(--ink);font-size:13px;margin-bottom:3px}
+    .experience{background:#fff}
+    .section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px}
+    .section-heading p{color:#75817b;font-size:13px;max-width:310px;margin:0}
+    .experience-card{display:grid;grid-template-columns:245px 1fr;border-top:1px solid var(--line);padding:34px 0 25px;gap:45px}
+    .experience-date{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8a795c;font-weight:700}
+    .experience-company{font-family:Manrope,sans-serif;font-weight:700;font-size:19px;margin:9px 0 4px}
+    .experience-location{font-size:12px;color:#8a948e}
+    .role-title{font-family:Manrope,sans-serif;font-size:23px;letter-spacing:-.03em;margin:0 0 18px}
+    .experience ul{padding:0 0 0 18px;margin:0;display:grid;gap:11px;color:#64716a;font-size:14px}
+    .experience li::marker{color:#b69a68}
+    .education{background:#eef2ec}
+    .education-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+    .edu-card{background:white;padding:29px;border:1px solid #e4e9e2}
+    .edu-card .year{font-size:11px;letter-spacing:.14em;color:#987d51;text-transform:uppercase;font-weight:700}
+    .edu-card h3{font-family:Manrope,sans-serif;font-size:20px;margin:13px 0 6px;letter-spacing:-.03em}
+    .edu-card p{font-size:13px;color:#6d7972;margin:0}
+    .coursework{margin-top:15px;padding-top:15px;border-top:1px solid var(--line);font-size:12px;color:#738078}
+    .skills{background:var(--dark);color:white}
+    .skills .section-kicker{color:var(--lime)}
+    .skills .intro{color:#b7c4bd}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.12);margin-top:45px;border:1px solid rgba(255,255,255,.12)}
+    .skill-card{background:#13211d;padding:29px 30px;min-height:205px}
+    .skill-index{font-family:var(--serif);color:var(--gold);font-size:14px}
+    .skill-card h3{font-family:Manrope,sans-serif;font-size:18px;margin:15px 0 10px}
+    .skill-card p{font-size:13px;color:#aebdb5;margin:0;line-height:1.8}
+    .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .skill-tags span{border:1px solid rgba(199,217,167,.23);padding:5px 9px;color:#d1ddd4;font-size:10px;letter-spacing:.04em}
+    .extras-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+    .language-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:14px 0;font-size:14px}
+    .language-row span:last-child{color:#7a867f;font-size:12px}
+    .interest-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+    .interest-list span{background:#e9eee7;padding:9px 13px;color:#53635a;font-size:12px}
+    .contact{background:#173b32;color:white;padding:80px 0}
+    .contact-inner{display:flex;justify-content:space-between;align-items:center;gap:40px}
+    .contact .section-kicker{color:var(--lime)}
+    .contact h2{max-width:580px;margin-bottom:13px}
+    .contact p{color:#c1d0c7;margin:0;font-size:14px}
+    .contact-details{display:grid;gap:14px;min-width:245px}
+    .contact-details a{color:#f1f5f0;font-size:14px;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:9px}
+    .contact-details small{display:block;color:#a7b9ae;font-size:9px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:4px}
+    footer{background:#101a18;color:#899990;padding:23px 0;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    footer .container{display:flex;justify-content:space-between;gap:20px}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media(max-width:800px){
+      .nav-links{display:none}.hero{min-height:auto;padding:145px 0 95px}.hero-inner{grid-template-columns:1fr;gap:45px}.hero-card{justify-self:start;width:100%;max-width:420px}
+      .hero-bottom{position:relative;bottom:auto;margin-top:55px}.about-grid{grid-template-columns:1fr;gap:35px}.experience-card{grid-template-columns:1fr;gap:14px}.section-heading{display:block}.section-heading p{margin-top:12px}.contact-inner{display:block}.contact-details{margin-top:35px}
+    }
+    @media(max-width:560px){
+      .container{width:min(100% - 34px,1120px)}nav{height:72px}.hero{padding-top:125px}h1{font-size:49px}.hero-copy{font-size:15px}.hero-bottom{font-size:8px}
+      section{padding:72px 0}.education-grid,.skills-grid,.extras-grid{grid-template-columns:1fr}.extras-grid{gap:45px}.skill-card{min-height:0}.contact{padding:65px 0}footer .container{display:block}footer span{display:block;margin-top:7px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#home"><span class="monogram">EM</span><span>EREZ MANI OYOLO</span></a>
+        <div class="nav-links">
+          <a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#expertise">Expertise</a>
+        </div>
+        <a class="nav-cta" href="#contact">Get in touch ↗</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero" id="home">
+    <div class="container hero-inner">
+      <div>
+        <div class="eyebrow">Economics · Finance · Research</div>
+        <h1>Erez Mani<br><span>Oyolo.</span></h1>
+        <p class="hero-copy">An economics graduate and financial analyst with a passion for turning research, market intelligence and financial data into clear, evidence-led insights.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#experience">Explore my experience <span>↗</span></a>
+          <a class="btn btn-outline" href="mailto:erezmani01@gmail.com">Contact me <span>↗</span></a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="card-label">Professional focus</div>
+        <div class="card-number">01<span style="color:var(--gold)">/</span>25</div>
+        <div class="card-caption">Financial Analyst Intern<br>Cytonn Investments · Nairobi</div>
+        <div class="card-rule"></div>
+        <div class="focus-list">
+          <span>Investment & company research</span>
+          <span>Financial modelling & analysis</span>
+          <span>Economic and market insights</span>
+        </div>
+      </aside>
+    </div>
+    <div class="container hero-bottom"><span>Nairobi, Kenya</span><span>Professional Portfolio · 2026</span></div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container about-grid">
+        <div class="reveal">
+          <div class="section-kicker">01 / Profile</div>
+          <h2>Grounded in economics.<br><em style="font-family:var(--serif);font-weight:400;color:#7d8d72">Driven by insight.</em></h2>
+          <div class="about-aside"><strong>Evidence-led thinking</strong><p>Connecting economic principles, financial information and market developments to practical decisions.</p></div>
+        </div>
+        <div class="about-copy reveal">
+          <p class="intro">I am an Economics graduate from the University of Nairobi, holding a Bachelor of Economics with Second Class Honours (Upper Division), awarded in 2024.</p>
+          <p>Since January 2025, I have been building practical experience as a Financial Analyst Intern at Cytonn Investments. My work spans investment research, financial modelling, market analysis, report writing and client-focused financial planning.</p>
+          <p>I am interested in how reliable data and economic evidence can support better business decisions, investment strategies and public policy outcomes.</p>
+          <div class="meta-row">
+            <div class="meta"><b>Nairobi, Kenya</b>Based in</div>
+            <div class="meta"><b>2024</b>Economics graduate</div>
+            <div class="meta"><b>English & Kiswahili</b>Languages</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><div class="section-kicker">02 / Experience</div><h2>Where research<br>meets practice.</h2></div>
+          <p>Professional experience in investment analysis, financial research and client-focused work.</p>
+        </div>
+        <article class="experience-card reveal">
+          <div>
+            <div class="experience-date">January 2025 — Present</div>
+            <div class="experience-company">Cytonn Investments</div>
+            <div class="experience-location">Nairobi, Kenya</div>
+          </div>
+          <div>
+            <h3 class="role-title">Financial Analyst Intern</h3>
+            <ul>
+              <li>Conduct fundamental company and investment opportunity research across Real Estate, Private Equity, Structured Products, Equities and Fixed Income.</li>
+              <li>Build financial models, analyse data and evaluate historical and projected financial statements.</li>
+              <li>Author investment research papers, draft written reports and prepare verbal presentations.</li>
+              <li>Undertake country, industry and capital markets research, alongside customer and industry analysis for business development.</li>
+              <li>Contribute to the formulation and implementation of investment strategies and participate in investment review meetings.</li>
+              <li>Work with clients to develop financial plans that support sound financial advice.</li>
+              <li>Prepare presentations and materials for company events, thought leadership and article writing.</li>
+              <li>Adhere to internal corporate policies and procedures.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="education" id="education">
+      <div class="container">
+        <div class="section-kicker">03 / Education</div>
+        <h2>Academic foundation.</h2>
+        <p class="intro">A foundation in economic theory, quantitative methods and the analysis of economic systems.</p>
+        <div class="education-grid">
+          <article class="edu-card reveal">
+            <div class="year">January 2020 — December 2024</div>
+            <h3>University of Nairobi</h3>
+            <p>Bachelor of Economics</p>
+            <div class="coursework"><strong>Second Class Honours — Upper Division</strong><br>Relevant coursework: Microeconomics, Macroeconomics, Development Economics and Quantitative Methods.</div>
+          </article>
+          <article class="edu-card reveal">
+            <div class="year">Academic interests</div>
+            <h3>Economics in context</h3>
+            <p>Applying economic reasoning to markets, institutions and development challenges.</p>
+            <div class="coursework">Areas of interest: sustainable development, market dynamics, investment research and evidence-based policy.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="expertise">
+      <div class="container">
+        <div class="section-kicker">04 / Capabilities</div>
+        <h2>Skills & competencies.</h2>
+        <p class="intro">A blend of analytical capability, clear communication and commercial awareness.</p>
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-index">01 — ANALYTICAL</div><h3>Analysis & problem-solving</h3>
+            <p>Collecting, analysing and visualising data; interpreting economic and market information; translating complex findings into useful insights.</p>
+            <div class="skill-tags"><span>MS Excel</span><span>Power BI</span><span>Dashboards</span><span>Financial analysis</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-index">02 — COMMUNICATION</div><h3>Communication & collaboration</h3>
+            <p>Preparing research reports, presentations and briefings, with experience engaging stakeholders across different environments.</p>
+            <div class="skill-tags"><span>Report writing</span><span>Presentations</span><span>Stakeholder engagement</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-index">03 — ADAPTABILITY</div><h3>Adaptability & learning agility</h3>
+            <p>Working across sectors and multi-stakeholder settings, managing competing priorities and learning in fast-paced environments.</p>
+            <div class="skill-tags"><span>Cross-sector exposure</span><span>Time management</span><span>Continuous learning</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-index">04 — COMMERCIAL</div><h3>Customer & commercial mindset</h3>
+            <p>Supporting client acquisition, retention and partnership development through market intelligence and opportunity mapping.</p>
+            <div class="skill-tags"><span>Market research</span><span>Client support</span><span>Opportunity mapping</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container extras-grid">
+        <div class="reveal">
+          <div class="section-kicker">05 / Languages</div><h2>Communication without barriers.</h2>
+          <div class="language-row"><strong>English</strong><span>Fluent</span></div>
+          <div class="language-row"><strong>Kiswahili</strong><span>Fluent</span></div>
+        </div>
+        <div class="reveal">
+          <div class="section-kicker">Beyond the desk</div><h2>Interests & impact.</h2>
+          <p class="intro" style="font-size:15px">Interested in work that contributes to inclusive growth and stronger communities.</p>
+          <div class="interest-list"><span>Sustainable development</span><span>Youth mentorship</span><span>Community outreach</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-inner">
+        <div>
+          <div class="section-kicker">06 / Contact</div>
+          <h2>Let’s connect and explore what’s possible.</h2>
+          <p>For professional opportunities, research collaborations or a conversation, feel free to reach out.</p>
+        </div>
+        <div class="contact-details">
+          <a href="mailto:erezmani01@gmail.com"><small>Email</small>erezmani01@gmail.com</a>
+          <a href="tel:+254768194553"><small>Phone</small>+254 768 194 553</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Nairobi%2C%20Kenya" target="_blank" rel="noopener"><small>Location</small>Nairobi, Kenya ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container"><span>© <span id="year"></span> Erez Mani Oyolo</span><span>Economics · Finance · Research</span></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
